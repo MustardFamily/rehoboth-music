@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>利河伯小家 Rehoboth</title>
+    <style>
+        /* 全局设置：使用温暖的米色背景 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f1e8; /* 暖米色背景 */
+            background-image: linear-gradient(135deg, #f5f1e8 0%, #e6ded1 100%); /* 微妙的渐变 */
+            color: #4a4a4a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* 确保占满全屏高度 */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 卡片容器设计 */
+        .container {
+            background: #fffbf6; /* 极浅的暖白卡片背景 */
+            padding: 40px 30px;
+            border-radius: 24px;
+            /* 更柔和、更有层次的阴影 */
+            box-shadow: 
+                0 10px 25px rgba(139, 119, 101, 0.1),
+                0 4px 10px rgba(139, 119, 101, 0.05);
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #eeeadd;
+        }
+
+        /* 标题样式 */
+        h1 {
+            margin: 0 0 25px 0;
+            font-size: 1.8rem;
+            color: #5d4037; /* 深棕色标题 */
+            line-height: 1.3;
+        }
+        h1 span {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: normal;
+            color: #8d6e63; /* 浅棕色副标题 */
+            margin-top: 5px;
+        }
+
+        /* 经文区块样式 */
+        .scripture-box {
+            background-color: #f3ece2; /* 稍微深一点的米色背景强调 */
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 35px;
+            position: relative;
+        }
+        /* 经文左侧的装饰线条 */
+        .scripture-box::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15%;
+            height: 70%;
+            width: 4px;
+            background-color: #cfa882; /* 暖金色/浅棕色装饰线 */
+            border-radius: 0 4px 4px 0;
+        }
+
+        .scripture-text {
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* 使用衬线字体增加典雅感 */
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #5a463a;
+            font-style: italic;
+            margin: 0 0 15px 0;
+        }
+
+        .scripture-verse {
+            font-weight: bold;
+            color: #8d6e63;
+            font-size: 0.95rem;
+        }
+
+        /* 播放器样式优化 */
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            outline: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        /* 尝试自定义播放器颜色(部分浏览器有效) */
+        audio::-webkit-media-controls-panel {
+            background-color: #f0eadd;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            /* 暖色渐变按钮 */
+            background: linear-gradient(to right, #cba583, #a88260);
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(168, 130, 96, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 6px rgba(168, 130, 96, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>利河伯之家<br><span>Rehoboth</span></h1>
+        
+        <div class="scripture-box">
+            <p class="scripture-text">“他离开那里，又挖了一口井，他们不为这井争竞了，他就给那井起名叫利河伯（就是“宽阔”的意思）。他说：‘耶和华现在给我们宽阔之地，我们必在这地昌盛。’”</p>
+            <div class="scripture-verse">—— 创世记 26:22</div>
+        </div>
+        
+        <audio controls controlsList="nodownload">
+            <source src="./lhb.m4a" type="audio/mp4">
+            您的浏览器不支持音频播放。
+        </audio>
+
+        <a href="./rehoboth_music.mp3" download="利河伯-家歌.m4a" class="btn">
+            下载
+        </a>
+
+    </div>
+
+</body>
+</html>
